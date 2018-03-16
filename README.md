@@ -7,7 +7,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |image|string|
 |group|references|null: false, foreign_key: true|
 |user|references|null: false, foreign_key: true|
@@ -20,9 +20,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|add_index, null: false|
+|name|string|add_index: true, null: false|
 |email|null: false|
-|password|null: false|
 
 
 ### Association
