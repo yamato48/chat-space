@@ -21,7 +21,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|add_index: true, null: false|
-|email|null: false|
+|email|string|null: false|
 
 
 ### Association
