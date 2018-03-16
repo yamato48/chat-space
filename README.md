@@ -27,17 +27,19 @@
 
 ### Association
 - has_many :groups, through: :members
+- has_many :members
 - has_many :messages
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string| |
+|name|string| |
 
 
 ### Association
 - has_many :users, through: :members
+- has_many :members
 - has_many :messages
 
 ## membersテーブル
