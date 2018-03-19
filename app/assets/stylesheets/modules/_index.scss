@@ -34,7 +34,7 @@
 
   &__list {
     background-color:  #2f3e51;
-    min-height: 680px;
+    height: 650px;
     clear: both;
 
   }
@@ -42,7 +42,6 @@
 
 .message-side {
   float: left;
-  height: 800px;
   &__header {
     float: left;
     width: calc(100vw - 380px);
@@ -76,7 +75,7 @@
     clear: both;
     padding: 0 40px;
     padding-top: 46px;
-    height: 600px;
+    height: 580px;
     overflow-y:scroll;
   }
 
