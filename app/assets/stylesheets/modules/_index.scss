@@ -7,6 +7,7 @@
 
 
 .group-side {
+
   width: 280px;
   float: left;
   &__header {
@@ -119,15 +120,7 @@
         line-height: 50px;
         float: left;
 
-      }
+        }
     }
   }
-
-
-}
-
-.clearfix:after{
-    content: "";
-    clear: both;
-    display: block;
 }
