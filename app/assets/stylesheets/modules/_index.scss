@@ -26,13 +26,14 @@
     i {
       color: $group-color;
       line-height: 100px;
+      margin-left: 10px;
       float: right;
     }
   }
 
   &__list {
     background-color:  #2f3e51;
-    min-height: 700px;
+    min-height: 680px;
     clear: both;
 
   }
@@ -40,6 +41,7 @@
 
 .message-side {
   float: left;
+  height: 800px;
   &__header {
     float: left;
     width: calc(100vw - 380px);
@@ -70,7 +72,11 @@
   }
 
   &__list {
+    clear: both;
     padding: 0 40px;
+    padding-top: 46px;
+    height: 600px;
+    overflow-y:scroll;
   }
 
 
@@ -79,21 +85,29 @@
   &__footer {
     padding: 0 40px;
     background-color: #AAAAAA;
-    bottom: 0;
     height: 90px;
     width: calc(100vw - 380px);
     position: absolute;
+    bottom: 0;
 
     &__body {
       margin: 20px 0;
       input {
         height: 50px;
-        width: calc( 100% - 150px );
-        margin: 0 10px;
+        width: calc( 100% - 160px );
+        padding: 0 10px;
         font-size: 16px;
         color: $message-color;
         float: left;
+
       }
+      i {
+        position:relative;
+        right: 20px;
+        bottom: -20px;
+        float: left;
+        }
+
 
       .send {
         height: 50px;
@@ -108,6 +122,7 @@
       }
     }
   }
+
 
 }
 
