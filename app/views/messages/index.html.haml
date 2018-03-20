@@ -1,23 +1,17 @@
-
 .notice
   チャットグループが作成されました
-
 / グループ画面
 .group-side
   .group-side__header
     %h1
       ユーザー名
-
-
     = link_to do
       %i.fa.fa-cog
     = link_to do
       %i.fa.fa-edit
-
   / グループ一覧
   .group-side__list
     = render partial: "group"
-
   / チャット画面
 .message-side
   .message-side__header
@@ -27,12 +21,8 @@
       edit
     %p
       MEMBER: メンバー名　メンバー名
-
   .message-side__list
     = render partial: "message"
-
-
-
   / 送信
   .message-side__footer
     .message-side__footer__body
