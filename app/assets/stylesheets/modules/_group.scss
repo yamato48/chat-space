@@ -1,13 +1,11 @@
-.contents {
-  padding: 0 20px;
-  h2 {
-    font-size: 15px;
-    color: $group-color;
-    padding-top: 20px;
-  }
-  h3 {
-    font-size: 11px;
-    color: $group-color;
-    padding: 5px 0 40px;
-  }
+.group-name {
+  font-size: 15px;
+  color: $group-color;
+  padding-top: 20px;
 }
+.last-message {
+  font-size: 11px;
+  color: $group-color;
+  padding: 5px 0 40px;
+}
+
