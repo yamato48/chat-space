@@ -2,8 +2,8 @@
   チャットグループが作成されました
 / グループ画面
 .group-side
-  .group-side__header
-    .group-side__header__user-name
+  .group-header
+    .user-name
       ユーザー名
     = link_to do
       %i.fa.fa-cog.icons
@@ -14,19 +14,19 @@
     = render partial: "group"
   / チャット画面
 .message-side
-  .message-side__header
-    .message-side__header__group-name
+  .message-header
+    .message-header__group-name
       グループ名
-    .message-side__header__button
+    .message-header__button
       edit
-    .message-side__header__member
+    .message-header__member
       MEMBER: メンバー名　メンバー名
-  .message-side__list
+  .message-list
     = render partial: "message"
   / 送信
-  .message-side__footer
-    .message-side__footer__body
-      %input{class: "message-side__footer__body__type", placeholder:"Type a message"}
-      %i.fa.fa-image.message-side__footer__body__icons
-      .message-side__footer__body__send
+  .message-footer
+    .footer-body
+      %input{class: "footer-body__form", placeholder:"Type a message"}
+      %i.fa.fa-image.footer-body__icons
+      .footer-body__button
         Send

@@ -7,11 +7,11 @@
 .group-side {
   width: 280px;
   float: left;
-  &__header {
+  .group-header {
     padding: 0 20px;
     background-color: #253141;
     min-height: 100px;
-    &__user-name {
+    .user-name {
       line-height: 100px;
       font-size: 16px;
       font-weight: bold;
@@ -34,7 +34,7 @@
 }
 .message-side {
   float: left;
-  &__header {
+  .message-header {
     float: left;
     width: calc(100vw - 380px);
     padding: 0 40px;
@@ -60,23 +60,23 @@
       padding-top: 15px;
     }
   }
-  &__list {
+  .message-list {
     clear: both;
     padding: 0 40px;
     padding-top: 46px;
     height: 580px;
     overflow-y:scroll;
   }
-  &__footer {
+  .message-footer {
     padding: 0 40px;
     background-color: #AAAAAA;
     height: 90px;
     width: calc(100vw - 380px);
     position: absolute;
     bottom: 0;
-    &__body {
+    .footer-body {
       margin: 20px 0;
-      &__type {
+      &__form {
         height: 50px;
         width: calc( 100% - 160px );
         padding: 0 10px;
@@ -90,7 +90,7 @@
         bottom: -20px;
         float: left;
         }
-      &__send {
+      &__button {
         height: 50px;
         width: 100px;
         margin-left:  15px;
