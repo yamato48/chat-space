@@ -3,30 +3,30 @@
 / グループ画面
 .group-side
   .group-side__header
-    %h1
+    .group-side__header__user-name
       ユーザー名
     = link_to do
-      %i.fa.fa-cog
+      %i.fa.fa-cog.icons
     = link_to do
-      %i.fa.fa-edit
+      %i.fa.fa-edit.icons
   / グループ一覧
   .group-side__list
     = render partial: "group"
   / チャット画面
 .message-side
   .message-side__header
-    %h1
+    .message-side__header__group-name
       グループ名
-    %span
+    .message-side__header__button
       edit
-    %p
+    .message-side__header__member
       MEMBER: メンバー名　メンバー名
   .message-side__list
     = render partial: "message"
   / 送信
   .message-side__footer
     .message-side__footer__body
-      %input{placeholder:"Type a message"}
-      %i.fa.fa-image
-      .send
+      %input{class: "message-side__footer__body__type", placeholder:"Type a message"}
+      %i.fa.fa-image.message-side__footer__body__icons
+      .message-side__footer__body__send
         Send
