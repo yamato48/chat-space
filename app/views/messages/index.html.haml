@@ -4,11 +4,14 @@
 .group-side
   .group-header
     .user-name
-      ユーザー名
-    = link_to do
-      %i.fa.fa-cog.icons
-    = link_to do
-      %i.fa.fa-edit.icons
+      = current_user.name
+    %ul.header-lists
+      %li.list
+        = link_to edit_users_path(current_user) do
+          %i.fa.fa-cog.icons
+      %li.list
+        = link_to do
+          %i.fa.fa-edit.icons
   / グループ一覧
   .group-side__list
     = render partial: "group"
