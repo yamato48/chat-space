@@ -1,18 +1,5 @@
-/ グループ画面
 .group-side
-  .group-header
-    .user-name
-      = current_user.name
-    %ul.header-lists
-      %li.list
-        = link_to edit_user_path(current_user) do
-          = fa_icon 'cog', class: 'icons'
-      %li.list
-        = link_to do
-          %i.fa.fa-edit.icons
-  / グループ一覧
-  .group-side__list
-    = render partial: "group"
+  = render partial: "group"
   / チャット画面
 .message-side
   .message-header
@@ -23,7 +10,7 @@
     .message-header__member
       MEMBER: メンバー名　メンバー名
   .message-list
-    = render partial: "message"
+    = render partial: "messages/message"
   / 送信
   .message-footer
     .footer-body
