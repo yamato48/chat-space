@@ -1,0 +1,21 @@
+/ グループ画面
+.group-header
+  .user-name
+    = current_user.name
+  %ul.header-lists
+    %li.list
+      = link_to edit_user_path(current_user) do
+        = fa_icon 'cog', class: 'icons'
+    %li.list
+      = link_to new_group_path do
+        = fa_icon 'edit', class: 'icons'
+/ グループ一覧
+.group-body
+  %ul.groups
+  - current_user.groups.each do |group|
+    = link_to group_messages_path(group) do
+      %li.group
+        %p.group-name
+          = group.name
+        %p.last-message
+          最後のメッセージ
