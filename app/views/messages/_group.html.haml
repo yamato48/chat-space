@@ -1,16 +1,8 @@
 %ul.groups
-  %li.group
-    %p.group-name
-      グループ名
-    %p.last-message
-      最後のメッセージ
-  %li.group
-    %p.group-name
-      グループ名
-    %p.last-message
-      最後のメッセージ
-  %li.group
-    %p.group-name
-      グループ名
-    %p.last-message
-      最後のメッセージ
+  - current_user.groups.each do |group|
+    = link_to group_messages_path(group) do
+      %li.group
+        %p.group-name
+          = group.name
+        %p.last-message
+          最後のメッセージ
