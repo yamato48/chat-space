@@ -1,0 +1,23 @@
+.group-side
+  = render partial: "groups/group"
+  / チャット画面
+.message-side
+  .message-header
+    .message-header__group-name
+      = @group.name
+    .message-header__button
+      edit
+    .message-header__member
+      MEMBER: メンバー名  メンバー名
+  .message-list
+    = render @messages
+  / 送信
+  .message-footer
+    .footer-body
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'footer-body__form', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icons'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'footer-body__button'
