@@ -1,20 +1,5 @@
 .group-side
   = render partial: "group"
   / チャット画面
-.message-side
-  .message-header
-    .message-header__group-name
-      グループ名
-    .message-header__button
-      edit
-    .message-header__member
-      MEMBER: メンバー名　メンバー名
-  .message-list
-    = render partial: "messages/message"
-  / 送信
-  .message-footer
-    .footer-body
-      %input{class: "footer-body__form", placeholder: "Type a message"}
-      %i.fa.fa-image.footer-body__icons
-      .footer-body__button
-        Send
+
+

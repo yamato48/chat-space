@@ -1,15 +1,12 @@
 %ul.messages
   %li.message
-    %p.message__name
-      メンバー名
-    %p.message__time
-      2018/03/16 20:40:04
-    %p.message__body
-      内容
-  %li.message
-    %p.message__name
-      メンバー名
-    %p.message__time
-      2018/03/16 20:40:04
-    %p.message__body
-      内容
+    .upper-message
+      %p.upper-message__name
+        = message.user.name
+      %p.upper-message__time
+        = I18n.l(message.created_at)
+    .lower-message
+      - if message.content.present?
+        %p.lower-message__body
+          = message.content
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

@@ -54,12 +54,15 @@
         color: $message-color;
         float: left;
       }
-      &__icons {
+      .icons {
         position:relative;
         right: 20px;
         bottom: -20px;
         float: left;
-        }
+      }
+      .hidden {
+        display:none;
+      }
       &__button {
         height: 50px;
         width: 100px;
@@ -69,7 +72,7 @@
         text-align: center;
         line-height: 50px;
         float: left;
-        }
+      }
     }
   }
 }
