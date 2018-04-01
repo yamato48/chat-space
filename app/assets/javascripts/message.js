@@ -1,12 +1,18 @@
 $(function(){
-  $(".footer-body__button").click(function() {
-    var input = $(".footer-body__form").val();
+  $("#new_message").on('submit', function(e) {
+    e.preventDefault();
+    var formdata = new FormData(this);
+    var url = $(this).attr('action')
+    console.log(formdata)
 
     $.ajax({
       type: 'POST',
-      url: '/groups/:group_id/messages',
-      data: {: input},
-      dataType: 'json'
+      url: url,
+      data: formdata,
+      dataType: 'json',
+      processData: false,
+      contentType: false
     })
+
   });
 });
