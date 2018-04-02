@@ -1,16 +1,17 @@
 $(function(){
+  moment.locale('ja');
+
   function buildHTML(message){
-    moment.locale('ja');
     var date = moment(message.time).format("YYYY/MM/DD HH:mm:ss");
-    var image = `<image class="lower-message__image" src=${message.image}>`
-    var text = `<div class="upper-message">
+    var image = (message.image == null) ? `` : `<image class="lower-message__image" src=${message.image}>`;
+    var html = `<div class="upper-message">
                   <p class="upper-message__name">${message.name}</p>
                   <p class="upper-message__time">${date}</p>
                 </div>
                 <div class="lower-message">
                   <p class="lower-message__body">${message.content}</p>
+                  ${image}
                 </div>`
-    var html = (message.image == null) ? text: text + image;
     return html;
   }
 
@@ -28,7 +29,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log('おｋ');
       var html = buildHTML(data);
       $('.message-list').append(html)
       $('.footer-body__text').val('')
@@ -39,7 +39,6 @@ $(function(){
     .fail(function(){
       alert('error')
       $('.footer-body__button').prop("disabled", false)
-      console.log('えらー');
     })
   });
 });
