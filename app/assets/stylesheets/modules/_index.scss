@@ -34,7 +34,7 @@
     clear: both;
     padding: 0 40px;
     padding-top: 46px;
-    height: 580px;
+    height: 550px;
     overflow-y:scroll;
   }
   .message-footer {
@@ -42,10 +42,8 @@
     background-color: #AAAAAA;
     height: 90px;
     width: calc(100vw - 380px);
-    position: absolute;
-    bottom: 0;
     .footer-body {
-      margin: 20px 0;
+      padding: 20px 0;
       &__text {
         height: 50px;
         width: calc( 100% - 160px );
