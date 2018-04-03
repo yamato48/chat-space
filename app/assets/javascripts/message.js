@@ -1,12 +1,9 @@
 $(function(){
-  moment.locale('ja');
-
   function buildHTML(message){
-    var date = moment(message.time).format("YYYY/MM/DD HH:mm:ss");
     var image = (message.image == null) ? `` : `<image class="lower-message__image" src=${message.image}>`;
     var html = `<div class="upper-message">
                   <p class="upper-message__name">${message.name}</p>
-                  <p class="upper-message__time">${date}</p>
+                  <p class="upper-message__time">${message.time}</p>
                 </div>
                 <div class="lower-message">
                   <p class="lower-message__body">${message.content}</p>
