@@ -43,10 +43,27 @@ $(function(){
 
   function autoReload(){
     var url = window.location.href;
-    // if (url.match(/\/groups\/\d+\/messages/)) {
+    if (url.match(/\/groups\/\d+\/messages/)) {
       var message_id = $('.message').last().attr('id');
-
-    // };
+      $.ajax({
+        url: url,
+        type: 'GET',
+        data: {id: message_id},
+        dataType: 'json'
+      })
+      .done(function(messages){
+        if (messages.length !== 0) {
+          messages.forEach(function(message) {
+          var html = buildHTML(message);
+          $('.message-list').append(html);
+          $('.message-list').animate({scrollTop: $('.message-list')[0].scrollHeight});
+          });
+        }
+      })
+      .fail(function(){
+        alert('更新できませんでした')
+      })
+    };
   };
   setInterval(autoReload, 2000)
 });
