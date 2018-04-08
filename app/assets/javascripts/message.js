@@ -63,7 +63,7 @@ $(function(){
       .fail(function(){
         alert('更新できませんでした')
       })
-    };
-  };
+    }
+  }
   setInterval(autoReload, 2000)
 });
