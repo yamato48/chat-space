@@ -3,7 +3,7 @@ lock "~> 3.10.1"
 
 set :application, "chat-space"
 set :repo_url, "git@github.com:yamato48/chat-space.git"
-
+set :linked_files, %w{ config/secrets.yml }
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
