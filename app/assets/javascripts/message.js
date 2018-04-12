@@ -65,5 +65,5 @@ $(function(){
       })
     }
   }
-  setInterval(autoReload, 2000)
+  setInterval(autoReload, 5000)
 });
